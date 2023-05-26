@@ -1,14 +1,14 @@
-<div class="container px-5">
+<div class="container">
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://www.mumbaiindians.com/static-assets/waf-images/bd/83/f2/0/NoIGrA1rey.jpg" class="d-block w-100" alt="...">
+      <img src="https://cdn.pixabay.com/photo/2015/03/07/10/00/cricket-662956_1280.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://www.mumbaiindians.com/static-assets/waf-images/22/37/bc/0/l9IeSzy9RT.jpg" class="d-block w-100" alt="...">
+      <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://www.mumbaiindians.com/static-assets/waf-images/62/0b/e1/0/hMGOPxJNAg.jpg" class="d-block w-100" alt="...">
+      <img src="https://cdn.pixabay.com/photo/2015/01/28/23/35/hills-615429_1280.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

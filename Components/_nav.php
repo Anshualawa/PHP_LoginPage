@@ -26,6 +26,7 @@ if (!$loggedin) {
                 </li>';
 }
 if ($loggedin) {
+    echo '<li class="nav-item"><span class="nav-link bi bi-person-check"> ' . $_SESSION['username'] . '</span></li>';
     echo '<li class="nav-item">
                     <a class="nav-link" href="logout.php">LogOut</a>
                 </li>';

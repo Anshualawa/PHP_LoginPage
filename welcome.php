@@ -27,11 +27,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     <?php require "Components/_nav.php" ?>
 
 
-    <h1>Welcome Dear
-        <?php echo $_SESSION['username'] ?>
-    </h1>
     <?php require "Components/_carousel.php" ?>
-
 
 
     <?php require "Components/_table.php" ?>

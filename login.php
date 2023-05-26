@@ -70,32 +70,51 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     </div>';
     }
+
+
+    //  ''
     ?>
 
 
+
     <div class="container">
-        <h1> Login to our website</h1>
+        <div class="row p-5">
+            <div class="col-6">
+                <h1> Login to our website</h1>
+                <form action="login.php" method="POST">
+                    <div class="mb-3 col-md-6">
+                        <label for="username" class="form-label">Username</label>
+                        <input required type="text" class="form-control" id="username" name="username"
+                            aria-describedby="emailHelp">
 
-        <form action="login.php" method="POST">
-            <div class="mb-3 col-md-6">
-                <label for="username" class="form-label">Username</label>
-                <input required type="text" class="form-control" id="username" name="username"
-                    aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3 col-md-6">
+                        <label for="psword" class="form-label">Password</label>
+                        <input required type="password" class="form-control" id="psword" name="psword">
+                    </div>
 
+                    <div class="mb-3 col-md-6 form-check">
+                        <input type="checkbox" class="form-check-input" id="remember">
+                        <label class="form-check-label" for="remember">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <!-- <button type="submit" class="btn btn-primary">SignUp</button> -->
+                </form>
             </div>
-            <div class="mb-3 col-md-6">
-                <label for="psword" class="form-label">Password</label>
-                <input required type="password" class="form-control" id="psword" name="psword">
+            <!-- <div class="col-6" style="background:url('https://cdn.pixabay.com/photo/2019/06/17/19/48/source-4280758_1280.jpg');background-size:100%"> -->
+            <!-- <div class="col-6" style="background:url('https://cdn.pixabay.com/photo/2016/03/27/07/12/apple-1282241_1280.jpg');background-size:100% 100%"> -->
+            <div class="col-6"
+                style="background:url('https://cdn.pixabay.com/photo/2016/11/29/08/41/apple-1868496_1280.jpg');background-size:100%">
             </div>
 
-            <div class="mb-3 col-md-6 form-check">
-                <input type="checkbox" class="form-check-input" id="remember">
-                <label class="form-check-label" for="remember">Check me out</label>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <?php require "Components/_carouselLogin.php" ?>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-            <!-- <button type="submit" class="btn btn-primary">SignUp</button> -->
-        </form>
-
+            <div class="col-2"></div>
+        </div>
     </div>
 
 

@@ -1,7 +1,5 @@
 <?php
 
-echo 'Table';
-
 include 'mydb.php';
 
 $sql = "SELECT id, Full_Name, Email_ID, Contact_Number FROM users";
@@ -34,7 +32,7 @@ $sql = "SELECT id, Full_Name, Email_ID, Contact_Number FROM users";
 
 
 
-<div class="container">
+<div class="container px-5">
 
     <table class="table table-hover">
         <thead>
