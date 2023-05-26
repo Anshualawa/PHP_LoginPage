@@ -52,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 <body>
     <?php require "Components/_nav.php" ?>
+    <?php require "Components/_marquee.php" ?>
 
     <?php
     if ($login) {
