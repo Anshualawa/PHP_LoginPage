@@ -26,7 +26,6 @@ if (!$loggedin) {
                 </li>';
 }
 if ($loggedin) {
-    echo '<li class="nav-item"><span class="nav-link bi bi-person-check"> ' . $_SESSION['username'] . '</span></li>';
     echo '<li class="nav-item">
                     <a class="nav-link" href="logout.php">LogOut</a>
                 </li>';
@@ -36,6 +35,14 @@ if ($loggedin) {
 
 
 echo '</ul>
+        </div>
+        <div class="row text-end text-light mx-5 ">
+            <span class="text-warning text-uper" style="text-transform: uppercase;">
+                <span class="text-light text-uper" style="text-transform: capitalize;">
+                    User : 
+                </span>
+                ' . $_SESSION['username'] . '
+            </span>
         </div>
     </div>
 </nav>';

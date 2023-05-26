@@ -4,6 +4,7 @@ $showErro = false;
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $err = "";
     include 'Components/mydb.php';
+    $fullname = $_POST['fullname'];
     $username = $_POST['username'];
     $password = $_POST['psword'];
     $cpassword = $_POST['cpsword'];
@@ -20,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $exists = false;
 
         if (($password == $cpassword) && $exists == false) {
-            $sql = "INSERT INTO `users`(`username`, `password`, `date`) VALUES ('$username','$password',current_timestamp())";
+            $sql = "INSERT INTO `users`(`Name`,`username`, `password`, `date`) VALUES ('$fullname','$username','$password',current_timestamp())";
             $result = mysqli_query($conn, $sql);
 
             if ($result) {
@@ -85,6 +86,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <h1> Signup to our website</h1>
 
         <form action="signup.php" method="POST">
+            <div class="mb-3 col-md-6">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input required type="text" class="form-control" id="fullname" name="fullname"
+                    aria-describedby="emailHelp">
+
+            </div>
             <div class="mb-3 col-md-6">
                 <label for="username" class="form-label">Username</label>
                 <input required type="text" class="form-control" id="username" name="username"
