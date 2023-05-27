@@ -83,33 +83,42 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
     <div class="container">
-        <h1> Signup to our website</h1>
+        <div class="row my-5">
+            <div class="col-6 ">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-9">
+                        <form action="signup.php" method="POST">
+                            <div class="mb-3 col-md-6">
+                                <label for="fullname" class="form-label">Full Name</label>
+                                <input required type="text" class="form-control" id="fullname" name="fullname"
+                                    aria-describedby="emailHelp">
 
-        <form action="signup.php" method="POST">
-            <div class="mb-3 col-md-6">
-                <label for="fullname" class="form-label">Full Name</label>
-                <input required type="text" class="form-control" id="fullname" name="fullname"
-                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="username" class="form-label">Username</label>
+                                <input required type="text" class="form-control" id="username" name="username"
+                                    aria-describedby="emailHelp">
 
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="psword" class="form-label">Password</label>
+                                <input required type="password" class="form-control" id="psword" name="psword">
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="cpsword" class="form-label">Confirm Password</label>
+                                <input required type="password" class="form-control" id="cpsword" name="cpsword">
+                                <div id="emailHelp" class="form-text">Make sure to type the same password</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">SignUp</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3 col-md-6">
-                <label for="username" class="form-label">Username</label>
-                <input required type="text" class="form-control" id="username" name="username"
-                    aria-describedby="emailHelp">
-
+            <div class="col-6 ">
+                <?php require 'Components/_carouselSignUp.php' ?>
             </div>
-            <div class="mb-3 col-md-6">
-                <label for="psword" class="form-label">Password</label>
-                <input required type="password" class="form-control" id="psword" name="psword">
-            </div>
-            <div class="mb-3 col-md-6">
-                <label for="cpsword" class="form-label">Confirm Password</label>
-                <input required type="password" class="form-control" id="cpsword" name="cpsword">
-                <div id="emailHelp" class="form-text">Make sure to type the same password</div>
-            </div>
-            <button type="submit" class="btn btn-primary">SignUp</button>
-        </form>
-
+        </div>
     </div>
 
 

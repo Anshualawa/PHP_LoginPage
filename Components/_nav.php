@@ -3,7 +3,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $loggedin = true;
 }
 
-echo '<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+echo '<nav class="navbar navbar-dark navbar-expand-lg bg-dark sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="iSecure.php">iSecure</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -36,14 +36,16 @@ if ($loggedin) {
 
 echo '</ul>
         </div>
-        <div class="row text-end text-light mx-5 ">
-            <span class="text-warning text-uper" style="text-transform: uppercase;">
+        <div class="row text-end text-light mx-5 ">';
+if ($loggedin) {
+    echo '       <span class="text-warning text-uper" style="text-transform: uppercase;">
                 <span class="text-light text-uper" style="text-transform: capitalize;">
                     User : 
                 </span>
                 ' . $_SESSION['username'] . '
-            </span>
-        </div>
+            </span>';
+}
+echo '  </div>
     </div>
 </nav>';
 

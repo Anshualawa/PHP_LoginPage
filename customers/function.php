@@ -21,24 +21,30 @@ function storeCustomer($costomerInput)
 
     global $conn;
 
-    $TeamCode = mysqli_real_escape_string($conn, $costomerInput['TeamCode']);
-    $TeamName = mysqli_real_escape_string($conn, $costomerInput['TeamName']);
-    $Wins = mysqli_real_escape_string($conn, $costomerInput['Wins']);
-    $Loss = mysqli_real_escape_string($conn, $costomerInput['Loss']);
-    $Tied = mysqli_real_escape_string($conn, $costomerInput['Tied']);
-    $Points = mysqli_real_escape_string($conn, $costomerInput['Points']);
-    $TeamLogo = mysqli_real_escape_string($conn, $costomerInput['TeamLogo']);
-    $Matches = mysqli_real_escape_string($conn, $costomerInput['Matches']);
+    // $TeamCode = mysqli_real_escape_string($conn, $costomerInput['TeamCode']);
+    // $TeamName = mysqli_real_escape_string($conn, $costomerInput['TeamName']);
+    // $Wins = mysqli_real_escape_string($conn, $costomerInput['Wins']);
+    // $Loss = mysqli_real_escape_string($conn, $costomerInput['Loss']);
+    // $Tied = mysqli_real_escape_string($conn, $costomerInput['Tied']);
+    // $Points = mysqli_real_escape_string($conn, $costomerInput['Points']);
+    // $TeamLogo = mysqli_real_escape_string($conn, $costomerInput['TeamLogo']);
+    // $Matches = mysqli_real_escape_string($conn, $costomerInput['Matches']);
 
-    if (empty(trim($TeamCode))) {
+    $TeamName = mysqli_real_escape_string($conn, $costomerInput['TeamName']);
+    $name = mysqli_real_escape_string($conn, $costomerInput['name']);
+    $squadeCategory = mysqli_real_escape_string($conn, $costomerInput['squadeCategory']);
+    $img = mysqli_real_escape_string($conn, $costomerInput['img']);
+
+
+    if (empty(trim($TeamName))) {
         return error422('Enter your Team Code ');
-    } elseif (empty(trim($TeamName))) {
-        return error422('Enter your TeamName ');
-    } elseif (empty(trim($Matches))) {
-        return error422('Enter your Matches ');
+    } elseif (empty(trim($name))) {
+        return error422('Enter your name ');
+    } elseif (empty(trim($squadeCategory))) {
+        return error422('Enter your squadeCategory ');
     } else {
 
-        $query = "INSERT INTO Cricket(TeamCode,TeamName, Matches,Wins,Loss,Tied,Points,TeamLogo) VALUES ('$TeamCode','$TeamName','$Matches','$Wins','$Loss','$Tied','$Points','$TeamLogo')";
+        $query = "INSERT INTO PlayerList(TeamName,name,squadeCategory,img) VALUES ('$TeamName','$name','$squadeCategory','$img')";
         $result = mysqli_query($conn, $query);
         if ($result) {
             $data = [
