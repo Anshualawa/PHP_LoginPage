@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
 
     while ($row = $result->fetch_assoc()) {
         echo '<tr>'
-            . '<td><a href="./Teams.php"><img src="' . $row['TeamLogo'] . '" height="30vh"></a></td>'
+            . '<td><a href="./team/_' . $row['TeamCode'] . '.php"><img src="' . $row['TeamLogo'] . '" height="30vh"></a></td>'
             . '<th>' . $row['TeamCode'] . '</th>'
             . '<td>' . $row['TeamName'] . '</td>'
             . '<td>' . $row['Matches'] . '</td>'

@@ -29,8 +29,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
 
     <?php
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        $TeamCode = $_POST['TeamCode'];
+    }
 
-    $TeamCode = 'PBKS';
     switch ($TeamCode) {
         case ('PBKS'):
             $sql = "SELECT name,squadeCategory,img FROM PlayerList WHERE TeamName = 'PBKS'";
