@@ -95,9 +95,13 @@
                 details and features of your "iSecure" website may vary depending on your requirements and the purpose
                 of
                 your
-                website.</p>
+                website.
+            </p>
 
         </div>
+        <div class="container">
+        Contacts : <a href="https://github.com/Anshualawa">Github</a> ||  Email: alawa3282@gmail.com
+        </div> 
 
     </div>
 

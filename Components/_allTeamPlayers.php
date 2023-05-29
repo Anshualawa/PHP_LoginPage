@@ -13,6 +13,8 @@ if ($result->num_rows > 0) {
     $mi = '';
     $gt = '';
     $pbks = '';
+    $csk = '';
+    $dc = '';
     while ($row = $result->fetch_assoc()) {
         $team = '
             <div class="card m-5 col-4 shadow  bg-light" style="width: 18rem;">
@@ -31,6 +33,10 @@ if ($result->num_rows > 0) {
             $gt .= $team;
         } elseif ($row['TeamName'] == 'PBKS') {
             $pbks .= $team;
+        } elseif ($row['TeamName'] == 'CSK') {
+            $csk .= $team;
+        }elseif ($row['TeamName'] == 'DC') {
+            $dc .= $team;
         }
     }
     echo '<h1 class="text-center text-dark"> Gujarat Titans</h1>';
@@ -39,6 +45,10 @@ if ($result->num_rows > 0) {
     echo $mi;
     echo '<h1 class="text-center text-dark"> Punjab Kings</h1>';
     echo $pbks;
+    echo '<h1 class="text-center text-dark"> Chennai Super Kings</h1>';
+    echo $csk;
+    echo '<h1 class="text-center text-dark">Delhi Capitals</h1>';
+    echo $dc;
     echo '</div></div>';
 
 

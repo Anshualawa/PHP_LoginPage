@@ -16,7 +16,7 @@
     <?php
     include '../Components/mydb.php';
 
-    $sql = "SELECT * FROM PlayerList WHERE TeamName='DC'";
+    $sql = "SELECT * FROM PlayerList WHERE TeamName='CSK'";
     $result = mysqli_query($conn, $sql);
 
     $num = mysqli_num_rows($result);
@@ -25,7 +25,7 @@
 
 
         echo ' <div class="container my-5"><div class="row">';
-        echo '<h1>Delhi Capitals</h1>';
+        echo '<h1>Chennai Super Kings</h1>';
         while ($row = $result->fetch_assoc()) {
             echo '
             <div class="card m-5 col-4 shadow  bg-light" style="width: 18rem;">
