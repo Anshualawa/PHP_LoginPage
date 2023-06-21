@@ -10,6 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $cpassword = $_POST['cpsword'];
     // $exists == false;
     // Check whether this username Exists
+
+    $existSql = "CREATE TABLE IF NOT EXISTS users (id INT auto_increment primary key,Name VARCHAR(20), username VARCHAR(20), password VARCHAR(20),date DATE)";
+    $result = mysqli_query($conn, $existSql);
+
     $existSql = "SELECT * FROM users WHERE username = '$username'";
     $result = mysqli_query($conn, $existSql);
     $numExistRows = mysqli_num_rows($result);
@@ -21,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $exists = false;
 
         if (($password == $cpassword) && $exists == false) {
-            $sql = "INSERT INTO `users`(`Name`,`username`, `password`, `date`) VALUES ('$fullname','$username','$password',current_timestamp())";
+            $sql = "INSERT INTO `users`(`name`,`username`, `password`, `date`) VALUES ('$fullname','$username','$password',current_timestamp())";
             $result = mysqli_query($conn, $sql);
 
             if ($result) {

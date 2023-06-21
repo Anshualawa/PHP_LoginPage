@@ -7,6 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['psword'];
 
+    $existSql = "CREATE TABLE IF NOT EXISTS users (id INT auto_increment primary key,Name VARCHAR(20), username VARCHAR(20), password VARCHAR(20),date DATE)";
+    $result = mysqli_query($conn, $existSql);
 
     $sql = "SELECT * FROM users WHERE username = '$username' AND password= '$password'";
     $result = mysqli_query($conn, $sql);
